@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>GameClient.ui.qml</file>
+        <file>monsters.yaml</file>
+        <file>GameClient/ItemCreator.qml</file>
+        <file>GameClient/ItemCreatorForm.ui.qml</file>
+    </qresource>
+</RCC>

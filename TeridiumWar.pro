@@ -4,24 +4,22 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT += qml quick widgets core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = TeridiumWar
 TEMPLATE = app
 
-SOURCES += main.cpp\
-    GameClient/game.cpp
+RESOURCES += qml.qrc
+
+SOURCES += main.cpp \
+    GameClient/gameclient.cpp
 
 HEADERS  += \
-    GameClient/game.h
+    GameClient/gameclient.h
 
-FORMS    += \
-    GameClient/game.ui
-
-DISTFILES += \
-    monsters.yaml
+FORMS    +=
 
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../build/yaml-cpp/release/ -lyaml-cpp
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../build/yaml-cpp/debug/ -lyaml-cpp
@@ -35,3 +33,6 @@ else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/../../build
 else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/../../build/yaml-cpp/release/yaml-cpp.lib
 else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/../../build/yaml-cpp/debug/yaml-cpp.lib
 else:unix: PRE_TARGETDEPS += $$PWD/../../build/yaml-cpp/libyaml-cpp.a
+
+# Default rules for deployment.
+include(deployment.pri)
