@@ -2,11 +2,11 @@
 #define GAMECLIENT_H
 
 #include <QObject>
-#include "LibTeridium/Item/item.h"
-#include "LibTeridium/Item/magicweapon.h"
-#include "LibTeridium/Item/projectile.h"
-#include "LibTeridium/Item/rangedweapon.h"
-#include "LibTeridium/Item/weapon.h"
+#include "Item/item.h"
+#include "Item/magicweapon.h"
+#include "Item/projectile.h"
+#include "Item/rangedweapon.h"
+#include "Item/weapon.h"
 
 class GameClient : public QObject
 {
