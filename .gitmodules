@@ -2,6 +2,3 @@
 	path = yaml-cpp
 	url = https://github.com/jbeder/yaml-cpp.git
 	branch = release-0.5.2
-[submodule "LibTeridium"]
-	path = LibTeridium
-	url = https://github.com/Toasterson/LibTeridium.git

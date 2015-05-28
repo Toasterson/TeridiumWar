@@ -3,6 +3,7 @@ import QtQuick.Controls 1.3
 import QtQuick.Window 2.2
 import QtQuick.Dialogs 1.2
 import org.Teridiumwar.Items 1.0
+import org.Teridiumwar.Magic 1.0
 
 ApplicationWindow {
     id: root

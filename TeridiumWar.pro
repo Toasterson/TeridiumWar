@@ -14,12 +14,30 @@ TEMPLATE = app
 RESOURCES += qml.qrc
 
 SOURCES += main.cpp \
-    GameClient/gameclient.cpp
+    GameClient/gameclient.cpp\
+    Magic/spell.cpp \
+    Item/item.cpp \
+    Item/weapon.cpp \
+    Item/magicweapon.cpp \
+    Item/rangedweapon.cpp \
+    Item/projectile.cpp \
+    Characters/character.cpp \
+    Characters/hero.cpp
 
 HEADERS  += \
-    GameClient/gameclient.h
-
-FORMS    +=
+    GameClient/gameclient.h\
+    qtyaml.h \
+    vec3.h \
+    power.h \
+    Magic/types.h \
+    Magic/spell.h \
+    Item/item.h \
+    Item/weapon.h \
+    Item/magicweapon.h \
+    Item/rangedweapon.h \
+    Item/projectile.h \
+    Characters/character.h \
+    Characters/hero.h
 
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../build/yaml-cpp/release/ -lyaml-cpp
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../build/yaml-cpp/debug/ -lyaml-cpp
